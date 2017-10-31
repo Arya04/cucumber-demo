@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+    <line>
+      <![CDATA[SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testAboutCHROME.html'>com_cucumber_testAbout</a> | 2 seconds]]>
+    </line>
+    <line>
+      <![CDATA[SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testDropDownCHROME.html'>com_cucumber_testDropDown</a> | 3 seconds]]>
+    </line>
+    <line>
+      <![CDATA[SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testSearchCHROME.html'>com_cucumber_testSearch</a> | 4 seconds]]>
+    </line>
+    <line>
+      <![CDATA[SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testStoreCHROME.html'>com_cucumber_testStore</a> | 3 seconds]]>
+    </line>
+  </reporter-output>
+  <suite name="com.cucumber.demo.cucumber_demo.GooglePageTest" duration-ms="34686" started-at="2017-10-31T19:35:24Z" finished-at="2017-10-31T19:35:59Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="34686" started-at="2017-10-31T19:35:24Z" finished-at="2017-10-31T19:35:59Z">
+      <class name="com.cucumber.demo.cucumber_demo.GooglePageTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="beforeSuite" is-config="true" duration-ms="9" started-at="2017-10-31T15:35:24Z" finished-at="2017-10-31T15:35:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeClass(org.testng.ITestContext)[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-10-31T15:35:24Z" finished-at="2017-10-31T15:35:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2609b277]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="startTest([Ljava.lang.Object;, java.lang.reflect.Method, org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="startTest" is-config="true" duration-ms="5147" started-at="2017-10-31T15:35:24Z" finished-at="2017-10-31T15:35:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@7674b62c]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.cucumber.demo.cucumber_demo.GooglePageTest.testAbout() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@2609b277]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[TestResult name=testAbout status=SUCCESS method=GooglePageTest.testAbout()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d] output=SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testAboutCHROME.html'>com_cucumber_testAbout</a> | 2 seconds]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="setUpPage" is-config="true" duration-ms="6" started-at="2017-10-31T15:35:29Z" finished-at="2017-10-31T15:35:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method status="PASS" signature="testAbout()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="testAbout" duration-ms="2527" started-at="2017-10-31T15:35:29Z" finished-at="2017-10-31T15:35:32Z">
+          <reporter-output>
+            <line>
+              <![CDATA[SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testAboutCHROME.html'>com_cucumber_testAbout</a> | 2 seconds]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testAbout -->
+        <test-method status="PASS" signature="endTest([Ljava.lang.Object;, java.lang.reflect.Method, org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="endTest" is-config="true" duration-ms="836" started-at="2017-10-31T15:35:32Z" finished-at="2017-10-31T15:35:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@7674b62c]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.cucumber.demo.cucumber_demo.GooglePageTest.testAbout() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@2609b277]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[TestResult name=testAbout status=SUCCESS method=GooglePageTest.testAbout()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d] output=SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testAboutCHROME.html'>com_cucumber_testAbout</a> | 2 seconds]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+        <test-method status="PASS" signature="startTest([Ljava.lang.Object;, java.lang.reflect.Method, org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="startTest" is-config="true" duration-ms="3570" started-at="2017-10-31T15:35:33Z" finished-at="2017-10-31T15:35:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@19e7a160]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.cucumber.demo.cucumber_demo.GooglePageTest.testDropDown() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@2609b277]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[TestResult name=testDropDown status=SUCCESS method=GooglePageTest.testDropDown()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d] output=SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testDropDownCHROME.html'>com_cucumber_testDropDown</a> | 3 seconds]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="setUpPage" is-config="true" duration-ms="0" started-at="2017-10-31T15:35:36Z" finished-at="2017-10-31T15:35:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method status="PASS" signature="testDropDown()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="testDropDown" duration-ms="3668" started-at="2017-10-31T15:35:36Z" finished-at="2017-10-31T15:35:40Z">
+          <reporter-output>
+            <line>
+              <![CDATA[SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testDropDownCHROME.html'>com_cucumber_testDropDown</a> | 3 seconds]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testDropDown -->
+        <test-method status="PASS" signature="endTest([Ljava.lang.Object;, java.lang.reflect.Method, org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="endTest" is-config="true" duration-ms="797" started-at="2017-10-31T15:35:40Z" finished-at="2017-10-31T15:35:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@19e7a160]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.cucumber.demo.cucumber_demo.GooglePageTest.testDropDown() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@2609b277]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[TestResult name=testDropDown status=SUCCESS method=GooglePageTest.testDropDown()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d] output=SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testDropDownCHROME.html'>com_cucumber_testDropDown</a> | 3 seconds]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+        <test-method status="PASS" signature="startTest([Ljava.lang.Object;, java.lang.reflect.Method, org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="startTest" is-config="true" duration-ms="2723" started-at="2017-10-31T15:35:41Z" finished-at="2017-10-31T15:35:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@662706a7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.cucumber.demo.cucumber_demo.GooglePageTest.testSearch() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@2609b277]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[TestResult name=testSearch status=SUCCESS method=GooglePageTest.testSearch()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d] output=SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testSearchCHROME.html'>com_cucumber_testSearch</a> | 4 seconds]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method status="PASS" signature="testSearch()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="testSearch" duration-ms="4741" started-at="2017-10-31T15:35:44Z" finished-at="2017-10-31T15:35:48Z">
+          <reporter-output>
+            <line>
+              <![CDATA[SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testSearchCHROME.html'>com_cucumber_testSearch</a> | 4 seconds]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSearch -->
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="setUpPage" is-config="true" duration-ms="0" started-at="2017-10-31T15:35:44Z" finished-at="2017-10-31T15:35:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method status="PASS" signature="endTest([Ljava.lang.Object;, java.lang.reflect.Method, org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="endTest" is-config="true" duration-ms="895" started-at="2017-10-31T15:35:48Z" finished-at="2017-10-31T15:35:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@662706a7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.cucumber.demo.cucumber_demo.GooglePageTest.testSearch() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@2609b277]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[TestResult name=testSearch status=SUCCESS method=GooglePageTest.testSearch()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d] output=SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testSearchCHROME.html'>com_cucumber_testSearch</a> | 4 seconds]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+        <test-method status="PASS" signature="startTest([Ljava.lang.Object;, java.lang.reflect.Method, org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="startTest" is-config="true" duration-ms="5773" started-at="2017-10-31T15:35:49Z" finished-at="2017-10-31T15:35:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@45a4b042]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.cucumber.demo.cucumber_demo.GooglePageTest.testStore() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@2609b277]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[TestResult name=testStore status=SUCCESS method=GooglePageTest.testStore()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d] output=SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testStoreCHROME.html'>com_cucumber_testStore</a> | 3 seconds]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method status="PASS" signature="setUpPage()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="setUpPage" is-config="true" duration-ms="1" started-at="2017-10-31T15:35:55Z" finished-at="2017-10-31T15:35:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method status="PASS" signature="testStore()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="testStore" duration-ms="3193" started-at="2017-10-31T15:35:55Z" finished-at="2017-10-31T15:35:58Z">
+          <reporter-output>
+            <line>
+              <![CDATA[SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testStoreCHROME.html'>com_cucumber_testStore</a> | 3 seconds]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testStore -->
+        <test-method status="PASS" signature="endTest([Ljava.lang.Object;, java.lang.reflect.Method, org.testng.ITestContext, org.testng.ITestResult)[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d]" name="endTest" is-config="true" duration-ms="798" started-at="2017-10-31T15:35:58Z" finished-at="2017-10-31T15:35:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@45a4b042]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.cucumber.demo.cucumber_demo.GooglePageTest.testStore() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@2609b277]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[[TestResult name=testStore status=SUCCESS method=GooglePageTest.testStore()[pri:0, instance:com.cucumber.demo.cucumber_demo.GooglePageTest@3c756e4d] output=SUCCESS | CHROME | <a target='_blank' href='com.cucumber.demo.cucumber_demo.GooglePageTest/com_cucumber_testStoreCHROME.html'>com_cucumber_testStore</a> | 3 seconds]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- com.cucumber.demo.cucumber_demo.GooglePageTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- com.cucumber.demo.cucumber_demo.GooglePageTest -->
+</testng-results>
