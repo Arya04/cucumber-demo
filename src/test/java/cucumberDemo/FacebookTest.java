@@ -10,10 +10,10 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class FacebookTest {
-	WebDriver driver = null;
+	WebDriver driver;
 	
 	@Given("^I've opened facebook$")
-	public void i_ve_opened_facebook() throws Exception {
+	public void i_ve_opened_facebook() throws Throwable {
 		
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
