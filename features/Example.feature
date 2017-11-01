@@ -11,20 +11,27 @@
 #Background: List of steps run before each of the scenarios
 #""" (Doc Strings)
 #| (Data Tables)
-#@ (Tags/Labels):To group Scenarios 
+#@ (Tags/Labels):To group Scenarios
 #<> (placeholder)
 #""
 ## (Comments)
-
 #Sample Feature Definition Template
-
 @tag
 Feature: Facebook Login
-	I want to use this template for my feature file
+  I want to use this template for my feature file
 
-@tag1
-Scenario: Successful Login to Facebook
-Given I've opened facebook
-When I enter valid username and valid password
-Then I login successfully
+  @tag1
+  Scenario Outline: Successful Login to Facebook
+    Given I've opened facebook
+    When I enter valid "<username>" and valid "<password>"
+    Then I login successfully
 
+    Examples: 
+      | username           | password     |
+      | al3xstar@yahoo.com | password123! |
+
+  @tag2
+  Scenario: Search for user
+    Given I'm on homepage
+    When I search for user
+    Then i go to user profile

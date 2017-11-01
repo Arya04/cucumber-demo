@@ -1,35 +1,66 @@
 package cucumberDemo;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class FacebookTest {
-	WebDriver driver;
+	//FacebookPage fb;
+	WebDriver d;
+	private static final String URL = "https://www.facebook.com";
+
+	//@Before
+	//public void setup() throws Exception{
+	//	d = new FirefoxDriver();
+	//	d.manage().window().maximize();
+	//	d.get(URL);
+	//}
 	
 	@Given("^I've opened facebook$")
 	public void i_ve_opened_facebook() throws Throwable {
-		
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.get("https://www.facebook.com/");
+		d = new FirefoxDriver();
+		d.manage().window().maximize();
+		d.get(URL);
+		FacebookPage fb = new FacebookPage(d);
+	
 	}
 
 
-	@When("^I enter valid username and valid password$")
-	public void i_enter_valid_username_and_valid_password() throws Throwable {
-		driver.findElement(By.id("email")).sendKeys("al3xstar@yahoo.com");
-		driver.findElement(By.id("pass")).sendKeys("password123!");
+	@When("^I enter valid \"([^\"]*)\" and valid \"([^\"]*)\"$")
+	public void i_enter_valid_and_valid(String username, String password) throws Throwable {
+		FacebookPage fb = new FacebookPage(d);
+		fb.login(username, password);
+
 	}
 
 	@Then("^I login successfully$")
 	public void i_login_successfully() throws Throwable {
-		driver.findElement(By.id("loginbutton")).click();
+		FacebookPage fb = new FacebookPage(d);
+		fb.assertHome();
+	}
+	//*******SCENARIO 2************
+	
+	@Given("^I'm on homepage$")
+	public void i_m_on_homepage() throws Throwable {
+	   System.out.println("home");
+	   FacebookPage fb = new FacebookPage(d);
+	}
+
+	@When("^I search for user$")
+	public void i_search_for_user() throws Throwable {
+		FacebookPage fb = new FacebookPage(d);
+	    fb.findUser("Arya Atighehchian");
+		System.out.println("nice");
+	}
+
+	@Then("^i go to user profile$")
+	public void i_go_to_user_profile() throws Throwable {
+	    System.out.println("there");
 	}
 
 
