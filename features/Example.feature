@@ -19,12 +19,12 @@
 #Sample Feature Definition Template
 
 @tag
-Feature: Google HomePage Feature
+Feature: Facebook Login
 	I want to use this template for my feature file
 
 @tag1
-Scenario: Search for a term
-Given I've opened google
-When I search for term
-Then I validate the term
+Scenario: Successful Login to Facebook
+Given I've opened facebook
+When I enter valid username and valid password
+Then I login successfully
 
