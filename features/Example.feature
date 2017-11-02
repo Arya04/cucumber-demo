@@ -20,18 +20,20 @@
 Feature: Facebook Login
   I want to use this template for my feature file
 
+  Background: 
+    When I Login facebook
+
   @tag1
-  Scenario Outline: Successful Login to Facebook
-    Given I've opened facebook
-    When I enter valid "<username>" and valid "<password>"
-    Then I login successfully
+  Scenario Outline: Search for user
+    And I search "<username>"
+    Then I go user profile
 
     Examples: 
-      | username           | password     |
-      | al3xstar@yahoo.com | password123! |
+      | username          |
+      | arya atighehchian |
+      | trevor royce      |
 
   @tag2
-  Scenario: Search for user
-    Given I'm on homepage
-    When I search for user
-    Then i go to user profile
+  Scenario: go to groups page
+    When I go to groups page
+    Then I should see groups page
