@@ -18,33 +18,32 @@ public class FacebookPage {
 	WebElement loginButton;
 	WebElement profile;
 	WebElement profPic;
-	WebElement post;
 	WebElement search;
-	WebElement home;
-	WebElement coverTitle;
 	
+	WebElement coverTitle;
 	WebElement groupsPage;
 	
 	private String username;
-	
 	private WebDriver driver;
 	private static final String URL = "https://www.facebook.com";
 	
 	public FacebookPage() {
+		//Firefox profile to disable push notifications
 		FirefoxProfile ffprofile = new FirefoxProfile();
 		ffprofile.setPreference("dom.webnotifications.enabled", false);
 		driver = new FirefoxDriver(ffprofile);
 		driver.manage().window().maximize();
 		driver.get(URL);
-		
-		
 	}
 	
 	public void login(String username, String password) {
+		//find email and password elements
 		email = driver.findElement(By.id("email"));
 		pass = driver.findElement(By.id("pass"));
+		//login credentials
 		email.sendKeys(username);
 		pass.sendKeys(password);
+		//login
 		loginButton = driver.findElement(By.id("loginbutton"));
 		loginButton.click();
 		
@@ -57,15 +56,18 @@ public class FacebookPage {
 	
 	public void findUser(String name) {
 		username = name.toLowerCase();
-		
+		//wait until search bar is located
 		WebDriverWait wait =new WebDriverWait(driver,5);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.name("q")));
+		//search name entered into search bar
 		search = driver.findElement(By.name("q"));
 		search.sendKeys(name);
 		search.sendKeys(Keys.ENTER);
 		
+		
 	}
 	public void goToProfile() {
+		//wait until profile is loaded on search page
 		WebDriverWait wait = new WebDriverWait(driver,5);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='xt_uniq_3']/div/div[1]/a/div")));
 		
@@ -74,24 +76,27 @@ public class FacebookPage {
 		
 	}
 	public void assertUser() {
+		//wait until user profile is loaded
 		WebDriverWait wait = new WebDriverWait(driver,5);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='fb-timeline-cover-name']")));
 		
+		//check if user profile name is equal to username searched
 		coverTitle = driver.findElement(By.xpath(".//*[@id='fb-timeline-cover-name']"));
 		String title = coverTitle.getText().toLowerCase();
 		Assert.assertEquals(title, username);
 	}
 	public void goToGroupsPage() {
-		//home = driver.findElement(By.xpath(".//*[@id='u_0_d']"));
-		//home.click();
+		//go to groups page
 		groupsPage = driver.findElement(By.xpath(".//*[@id='navItem_1434659290104689']/a/div"));
 		groupsPage.click();
 		
 	
 	}
-	public void assertPage() {
+	public void assertGroups() {
+		//check if page is on groups page
 		String page = driver.getCurrentUrl();
-		Assert.assertEquals(page, URL +"/groups/");
+		String groups = URL + "/groups/";
+		Assert.assertEquals(page, groups);
 	}
 
 }
