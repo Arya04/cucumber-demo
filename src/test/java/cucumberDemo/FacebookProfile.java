@@ -15,11 +15,12 @@ public class FacebookProfile {
 	
 	public FacebookProfile(WebDriver driver) {
 		this.driver = driver;
-		
+		String coverTitleXpath = ".//*[@id='fb-timeline-cover-name']";
+
 		WebDriverWait wait = new WebDriverWait(driver,5);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='fb-timeline-cover-name']")));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(coverTitleXpath)));
 		//initialize webelement in constructor because of necessary wait which cant be done with FindBy
-		coverTitle = driver.findElement(By.xpath(".//*[@id='fb-timeline-cover-name']"));
+		coverTitle = driver.findElement(By.xpath(coverTitleXpath));
 	}
 	//return webelement to check title for test
 	public WebElement getCoverTitle() {
