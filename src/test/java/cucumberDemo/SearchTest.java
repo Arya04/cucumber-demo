@@ -29,6 +29,7 @@ public class SearchTest {
 	}
 
 	@And("^I search \"([^\"]*)\"$")
+	
 	public void i_search(String user) {
 		username = user.toLowerCase();
 		
