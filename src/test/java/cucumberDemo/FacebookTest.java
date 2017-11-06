@@ -18,19 +18,16 @@ public class FacebookTest {
 	private String username;
 	private static final String URL = "https://www.facebook.com";
 
-	@Before
-	public void setup() {
-		//setup driver before logging in
-		
-		FirefoxProfile ffprofile = new FirefoxProfile();
-		ffprofile.setPreference("dom.webnotifications.enabled", false);
-		driver = new FirefoxDriver(ffprofile);
-		driver.manage().window().maximize();
-		driver.get(URL);
+	private Context context;
+	
+	public FacebookTest(Context context) {
+		this.context = context;
 	}
 	
 	@When("^I Login facebook$")
 	public void i_Login_facebook() {
+		driver = context.getDriver();
+		driver.get(URL);
 		
 		FacebookLogin fb = new FacebookLogin(driver);
 	    fb.login("al3xstar@yahoo.com", "password123!");
@@ -70,10 +67,7 @@ public class FacebookTest {
 		Assert.assertEquals(page, groups);
 	}
 	
-	@After
-	public void tearDown() {
-		driver.quit();
-	}
+	
 
 
 
