@@ -14,6 +14,9 @@ public class FacebookHome {
 	@FindBy(xpath = ".//*[@id='navItem_1434659290104689']/a/div")
 	WebElement groupsPage;
 	
+	@FindBy(xpath = ".//*[@id='navItem_1572366616371383']/a/div")
+	WebElement friendsPage;
+	
 	public FacebookHome(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -27,6 +30,10 @@ public class FacebookHome {
 	//navigate to groups page
 	public void goToGroupsPage() {
 		groupsPage.click();
+	}
+	
+	public void goToFriendsPage() {
+		friendsPage.click();
 	}
 	
 }

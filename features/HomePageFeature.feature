@@ -24,6 +24,6 @@ Feature: Facebook navigate to different page
     When I Login to facebook
 
   @tag2
-  Scenario: go to groups page
-    When I go to groups page
-    Then I should see groups page
+  Scenario: go to friends page
+    When I go to friends page
+    Then I should see friends page
