@@ -11,13 +11,13 @@
 #Background: List of steps run before each of the scenarios
 #""" (Doc Strings)
 #| (Data Tables)
-#@ (Tags/Labels):To group Scenarios
+#@ (Tags/Labels):To group Scenarios 
 #<> (placeholder)
 #""
 ## (Comments)
+
 #Sample Feature Definition Template
-@tag
-Feature: Facebook Login
+Feature: Facebook Login and search
   I want to use this template for my feature file
 
   Background: 
@@ -32,8 +32,3 @@ Feature: Facebook Login
       | username          |
       | arya atighehchian |
       | trevor royce      |
-
-  @tag2
-  Scenario: go to groups page
-    When I go to groups page
-    Then I should see groups page

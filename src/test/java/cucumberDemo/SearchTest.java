@@ -2,25 +2,19 @@ package cucumberDemo;
 
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
-
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import junit.framework.Assert;
 
-public class FacebookTest {
+public class SearchTest {
 	WebDriver driver;
 	private String username;
 	private static final String URL = "https://www.facebook.com";
 
 	private Context context;
 	
-	public FacebookTest(Context context) {
+	public SearchTest(Context context) {
 		this.context = context;
 	}
 	
@@ -53,22 +47,6 @@ public class FacebookTest {
 		Assert.assertEquals(username,profile.getCoverTitle().getText().toLowerCase());
 		
 	}
-
-	@When("^I go to groups page$")
-	public void i_go_to_groups_page() {
-		FacebookHome fb = new FacebookHome(driver);
-		fb.goToGroupsPage();
-	}
-
-	@Then("^I should see groups page$")
-	public void i_should_see_groups_page() {
-	    String page = driver.getCurrentUrl();
-	    String groups = URL + "/groups/";
-		Assert.assertEquals(page, groups);
-	}
-	
-	
-
 
 
 }
