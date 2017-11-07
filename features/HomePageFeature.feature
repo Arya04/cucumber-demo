@@ -27,3 +27,7 @@ Feature: Facebook navigate to different page
   Scenario: go to friends page
     When I go to friends page
     Then I should see friends page
+    
+  Scenario: post a status
+   When I post a status
+   Then I should see status

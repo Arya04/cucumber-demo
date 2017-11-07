@@ -14,7 +14,7 @@ public class Context {
 	
 	private WebDriver driver;
 	private static final String BROWSER = "Firefox";
-	private static final String driverPath = "c://Users/Coveros/Desktop/";
+	private static final String DRIVERPATH = "c://Users/Coveros/Desktop/";
 	
 	@Before
 	public void setup() {
@@ -27,7 +27,7 @@ public class Context {
 			else {
 				ChromeOptions ops = new ChromeOptions();
 	            ops.addArguments("--disable-notifications");
-				System.setProperty("webdriver.chrome.driver",driverPath+"chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver",DRIVERPATH+"chromedriver.exe");
 				driver = new ChromeDriver(ops);
 			}
 			driver.manage().window().maximize();
