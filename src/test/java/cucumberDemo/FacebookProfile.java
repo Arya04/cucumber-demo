@@ -1,7 +1,6 @@
 package cucumberDemo;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +12,11 @@ public class FacebookProfile {
 	WebDriver driver;
 	WebElement coverTitle;
 	
+	@FindBy(css = "div[class='_5pbx userContent _22jv _3576']")
+	WebElement postText;
+	
 	public FacebookProfile(WebDriver driver) {
+		PageFactory.initElements(driver, this);
 		this.driver = driver;
 		String coverTitleXpath = ".//*[@id='fb-timeline-cover-name']";
 
@@ -25,5 +28,9 @@ public class FacebookProfile {
 	//return webelement to check title for test
 	public WebElement getCoverTitle() {
 		return coverTitle;
+	}
+	
+	public WebElement getPostText() {
+		return postText;
 	}
 }

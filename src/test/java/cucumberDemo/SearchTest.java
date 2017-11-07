@@ -33,7 +33,7 @@ public class SearchTest {
 	public void i_search(String user) {
 		username = user.toLowerCase();
 		
-		FacebookHome fb = new FacebookHome(driver);
+		FacebookWelcome fb = new FacebookWelcome(driver);
 		fb.search(user);
 	}
 

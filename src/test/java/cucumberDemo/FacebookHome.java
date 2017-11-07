@@ -1,45 +1,33 @@
 package cucumberDemo;
 
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
+
 public class FacebookHome {
+	WebDriver driver;
+	WebElement msg;
+	WebElement btn;
 	
-	@FindBy(name = "q")
-	WebElement searchBar;
-	
-	@FindBy(xpath = ".//*[@id='navItem_1434659290104689']/a/div")
-	WebElement groupsPage;
-	
-	@FindBy(xpath = ".//*[@id='navItem_1572366616371383']/a/div")
-	WebElement friendsPage;
-	
-	@FindBy(id = "\"u_0_d\"")
-	WebElement home;
+	@FindBy(css = "span[class='uiIconText _5qtp']")
+	WebElement post;
 	
 	public FacebookHome(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+		this.driver = driver;
 	}
-	
-	//search whatever in the search bar
-	public void search(String query) {
-		searchBar.sendKeys(query);
-		searchBar.sendKeys(Keys.ENTER);
+	public void makePost(String arg1) throws InterruptedException {
+		post.click();
+		Thread.sleep(3000);
+		msg = driver.findElement(By.cssSelector("div[class='notranslate _5rpu']"));
+		msg.sendKeys(arg1);
+		
+		btn = driver.findElement(By.cssSelector("button[class='_1mf7 _4jy0 _4jy3 _4jy1 _51sy selected _42ft']"));
+		btn.click();
 	}
-	
-	//navigate to groups page
-	public void goToGroupsPage() {
-		groupsPage.click();
-	}
-	
-	public void goToFriendsPage() {
-		friendsPage.click();
-	}
-	public void goHome() {
-		home.click();
-	}
-	
+
 }
