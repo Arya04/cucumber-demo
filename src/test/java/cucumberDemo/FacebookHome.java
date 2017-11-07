@@ -17,6 +17,9 @@ public class FacebookHome {
 	@FindBy(xpath = ".//*[@id='navItem_1572366616371383']/a/div")
 	WebElement friendsPage;
 	
+	@FindBy(id = "\"u_0_d\"")
+	WebElement home;
+	
 	public FacebookHome(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -34,6 +37,9 @@ public class FacebookHome {
 	
 	public void goToFriendsPage() {
 		friendsPage.click();
+	}
+	public void goHome() {
+		home.click();
 	}
 	
 }

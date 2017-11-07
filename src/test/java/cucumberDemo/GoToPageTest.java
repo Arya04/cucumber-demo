@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -61,44 +62,44 @@ public class GoToPageTest {
 		WebElement friends = driver.findElement(By.xpath(friendsPath));
 		assertTrue(friends.isDisplayed());
 	}
-	
-	@When("^I post a status$")
-	public void i_post_a_status() throws IOException {
+	@When("^I post a status saying \"([^\"]*)\"$")
+	public void i_post_a_status_saying(String arg1) throws InterruptedException  {
 		WebElement home = driver.findElement(By.id("u_0_d"));
 		home.click();
 		
 		
 		WebDriverWait wait = new WebDriverWait(driver,5);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='navItem_1572366616371383']/a/div")));
-		captureScreenShots("example");
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("span[class='uiIconText _5qtp']")));
+		
+		WebElement  post = driver.findElement(By.cssSelector("span[class='uiIconText _5qtp']"));
+		post.click();
+		
+		Thread.sleep(5000);
+		WebElement msg = driver.findElement(By.cssSelector("div[class='notranslate _5rpu']"));
+		msg.sendKeys(arg1);
+		
+		WebElement btn = driver.findElement(By.cssSelector("button[class='_1mf7 _4jy0 _4jy3 _4jy1 _51sy selected _42ft']"));
+		btn.click();
+	}
+	
+	@Then("^I should see status with \"([^\"]*)\"$")
+	public void i_should_see_status_with(String arg1) throws InterruptedException {
+		Thread.sleep(2000);
+		WebElement prof = driver.findElement(By.id("profile_pic_header_100022818877835"));
+		prof.click();
+		Thread.sleep(3000);
 		
 		
-		System.out.println(driver.getPageSource());
-		
-		//WebElement  post = driver.findElement(By.cssSelector("div._1mwp.navigationFocus._395._1mwq._4c_p._5bu_._34nd._21mu._5yk1"));
-		//post.click();
-		//post.sendKeys("hello");
-		//driver.findElement(By.xpath(".//*[@id='js_sl']/div[2]/div[3]/div/div[2]/div/button")).click();
-		
+		WebElement text = driver.findElement(By.cssSelector("div[class='_5pbx userContent _22jv _3576']"));
+		String actual = text.getText();
+		String expected = arg1;
+		Assert.assertEquals(expected, actual);
 	}
 
-	@Then("^I should see status$")
-	public void i_should_see_status() {
-		
-	}
-	public void captureScreenShots(String fileName) throws IOException {
-		folder_name = "screenshot";
-		File f = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		// Date format for screenshot file name
-		df = new SimpleDateFormat("dd-MMM-yyyy__hh_mm_ssaa");
-		// create dir with given folder name
-		new File(folder_name).mkdir();
-		// Setting file name
-		String file_name = fileName + df.format(new Date()) + ".png";
-		// copy screenshot file into screenshot folder.
-		String file_new = folder_name + "/" + file_name;
-		FileUtils.copyFile(f, new File(file_new));
-	}
+	
+
+	
+	
 	
 	
 

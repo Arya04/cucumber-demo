@@ -11,11 +11,10 @@
 #Background: List of steps run before each of the scenarios
 #""" (Doc Strings)
 #| (Data Tables)
-#@ (Tags/Labels):To group Scenarios 
+#@ (Tags/Labels):To group Scenarios
 #<> (placeholder)
 #""
 ## (Comments)
-
 #Sample Feature Definition Template
 Feature: Facebook navigate to different page
   I want to use this template for my feature file
@@ -27,7 +26,12 @@ Feature: Facebook navigate to different page
   Scenario: go to friends page
     When I go to friends page
     Then I should see friends page
-    
-  Scenario: post a status
-   When I post a status
-   Then I should see status
+
+  Scenario Outline: post a status
+    When I post a status saying "<text>"
+    Then I should see status with "<text>"
+
+    Examples: 
+      | text |
+      | what's up |
+      | nothing much |
